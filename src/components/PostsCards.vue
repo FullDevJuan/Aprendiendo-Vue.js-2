@@ -1,5 +1,5 @@
 <template>
-  <div class="post-card">
+  <div class="post-card" @click="$emit('click')">
     <h2>{{ title }}</h2>
     <p>{{ body }}</p>
   </div>
@@ -21,5 +21,6 @@ export default {
   padding: 16px;
   border-radius: 8px;
   max-width: 300px;
+  cursor: pointer;
 }
 </style>

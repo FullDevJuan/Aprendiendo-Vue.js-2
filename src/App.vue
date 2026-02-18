@@ -19,6 +19,11 @@ export default {
     const posts = await res.json();
     this.posts = posts;
   },
+  methods: {
+    handleClick(id) {
+      console.log(`Click on post id: ${id}`);
+    },
+  },
 };
 </script>
 
@@ -34,6 +39,7 @@ export default {
         :key="post.id"
         :title="post.title"
         :body="post.body"
+        @click="handleClick(post.id)"
       ></PostsCards>
     </div>
   </div>
