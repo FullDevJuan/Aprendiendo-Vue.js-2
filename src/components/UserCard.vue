@@ -29,7 +29,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .user-card {
   border: 1px solid #ccc;
   padding: 16px;
