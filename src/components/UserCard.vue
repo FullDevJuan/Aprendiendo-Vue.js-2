@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container-users">
     <div v-for="user in users" :key="user.id" class="user-card">
       <h2>User info</h2>
       <p>Name: {{ user.name }}</p>
@@ -9,6 +9,7 @@
         Address: {{ user.address.street }}, {{ user.address.suite }},
         {{ user.address.city }}
       </p>
+      <p v-if="user.website.split('.')[1] === 'org'">Web: {{ user.website }}</p>
     </div>
   </div>
 </template>
@@ -30,6 +31,11 @@ export default {
 </script>
 
 <style scoped>
+.container-users {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
 .user-card {
   border: 1px solid #ccc;
   padding: 16px;
