@@ -35,6 +35,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
+  justify-content: center;
 }
 .user-card {
   border: 1px solid #ccc;
