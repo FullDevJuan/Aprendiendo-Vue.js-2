@@ -22,10 +22,22 @@ export default {
       users: [],
     };
   },
-  async mounted() {
-    const res = await fetch("https://jsonplaceholder.typicode.com/users");
-    const users = await res.json();
-    this.users = users;
+  created() {
+    // El componente se ha creado, pero aún no se ha montado en el DOM
+    // Aquí es un buen lugar para realizar llamadas a APIs o inicializar datos
+    this.fetchUsers();
+  },
+  mounted() {
+    // El componente ya está montado en el DOM
+    // Aquí se pueden realizar manipulaciones del DOM o iniciar librerías que dependan de el
+    console.log(this.$el);
+  },
+  methods: {
+    async fetchUsers() {
+      const res = await fetch("https://jsonplaceholder.typicode.com/users");
+      const users = await res.json();
+      this.users = users;
+    },
   },
 };
 </script>
