@@ -164,6 +164,7 @@ button {
   border-radius: 4px;
   cursor: pointer;
   font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 button[type="submit"] {
   background-color: #1a1a1a;
@@ -179,8 +180,7 @@ button[type="button"] {
   background-color: transparent;
   color: rgba(0, 0, 0, 0.842);
 }
-
 button[type="button"]:hover {
-  /* background-color: #e4e4e4; */
+  background-color: rgba(0, 0, 0, 0.051);
 }
 </style>
