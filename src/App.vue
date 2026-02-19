@@ -1,12 +1,14 @@
 <script>
 import HelloWorld from "./components/HelloWorld.vue";
-import PostsCards from "./components/PostsCards.vue";
+import BuscadorEmpleados from "./components/BuscadorEmpleados.vue";
+// import PostsCards from "./components/PostsCards.vue";
 // import UserCard from "./components/UserCard.vue";
 export default {
   name: "App",
   components: {
     HelloWorld,
-    PostsCards,
+    BuscadorEmpleados,
+    // PostsCards,
     // UserCard,
   },
   data() {
@@ -32,8 +34,10 @@ export default {
     <HelloWorld
       msg="Welcome to my first interaction with Vue.js 2"
     ></HelloWorld>
+
+    <BuscadorEmpleados></BuscadorEmpleados>
     <!-- <UserCard></UserCard> -->
-    <div class="container-posts">
+    <!-- <div class="container-posts">
       <PostsCards
         v-for="post in posts"
         :key="post.id"
@@ -41,7 +45,7 @@ export default {
         :body="post.body"
         @click="handleClick(post.id)"
       ></PostsCards>
-    </div>
+    </div> -->
   </div>
 </template>
 
