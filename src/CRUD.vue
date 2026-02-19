@@ -1,6 +1,6 @@
 <template>
   <div id="crud">
-    <h1>CRUD - Computadores (localStorage)</h1>
+    <h1 style="text-align: center">CRUD - Computadores (localStorage)</h1>
     <Computadores></Computadores>
   </div>
 </template>

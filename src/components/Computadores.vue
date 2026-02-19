@@ -1,13 +1,14 @@
 <template>
   <div class="main">
     <input
-      type="text"
+      class="inputBusqueda"
+      type="search"
       placeholder="Buscar por marca o modelo"
       v-model="search"
     />
     <br />
     <br />
-    <button @click="abrirFormulario">Añadir +</button>
+    <button class="btnAñadir" @click="abrirFormulario">Añadir +</button>
     <table>
       <thead>
         <tr>
@@ -145,6 +146,30 @@ export default {
 };
 </script>
 <style>
+.btnAñadir {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+.inputBusqueda {
+  outline: none;
+  font-family: monospace;
+  width: 100%;
+  max-width: 300px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.btnAñadir:hover {
+  background-color: #2a2a2a;
+}
 table {
   width: 100%;
   border-collapse: collapse;
