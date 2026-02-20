@@ -41,6 +41,8 @@
   </div>
 </template>
 <script>
+import { getComputadores } from "@/services/computadores";
+import { auth, db } from "@/firebase/config";
 import TablePc from "./TablePc.vue";
 import FormComputadores from "./FormComputadores.vue";
 export default {
@@ -56,6 +58,14 @@ export default {
   components: {
     TablePc,
     FormComputadores,
+  },
+  async created() {
+    try {
+      const computadores = await getComputadores(db, auth);
+      console.log(computadores);
+    } catch (error) {
+      console.log(error);
+    }
   },
 
   mounted() {
