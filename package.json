@@ -2,13 +2,16 @@
   "name": "lab-vue2",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "fb": "node src/firebase/config.js"
   },
   "dependencies": {
     "core-js": "^3.8.3",
+    "firebase": "^12.9.0",
     "vue": "^2.6.14"
   },
   "devDependencies": {
